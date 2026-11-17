@@ -3,4 +3,6 @@
   <url><loc>https://happybarme.com/</loc><lastmod>2026-11-17</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://happybarme.com/mentions-legales.html</loc><lastmod>2026-11-17</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://happybarme.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://happybarme.com/marketing/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://happybarme.com/support/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
