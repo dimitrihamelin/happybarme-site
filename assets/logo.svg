@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Logo HappyBarMe — création originale (orbe en dégradés + étoile à 4 branches dessinée à la main).
+       Modifiable dans Figma, Illustrator, Inkscape, Affinity ou Canva. -->
+  <defs>
+    <!-- couleurs principales : rose → violet → bleu -->
+    <linearGradient id="base" x1="0.2" y1="0.05" x2="0.8" y2="0.95">
+      <stop offset="0" stop-color="#FF66B8"/>
+      <stop offset="0.45" stop-color="#9D66FF"/>
+      <stop offset="1" stop-color="#3399FF"/>
+    </linearGradient>
+    <!-- touche turquoise à gauche -->
+    <radialGradient id="cyan" cx="0.12" cy="0.62" r="0.6">
+      <stop offset="0" stop-color="#26EBD9" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#26EBD9" stop-opacity="0"/>
+    </radialGradient>
+    <!-- reflet en haut à gauche -->
+    <radialGradient id="shine" cx="0.3" cy="0.22" r="0.6">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+  </defs>
+
+  <!-- halo lumineux (supprime ce calque pour un logo sans lueur) -->
+  <circle id="halo" cx="512" cy="512" r="310" fill="url(#base)" filter="url(#glow)" opacity="0.55"/>
+
+  <!-- orbe -->
+  <g id="orbe">
+    <circle cx="512" cy="512" r="310" fill="url(#base)"/>
+    <circle cx="512" cy="512" r="310" fill="url(#cyan)"/>
+    <circle cx="512" cy="512" r="310" fill="url(#shine)"/>
+    <circle cx="512" cy="512" r="308" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="4"/>
+  </g>
+
+  <!-- étoile -->
+  <path id="etoile" fill="#FFFFFF"
+        d="M512 345 C525.4 470.25 553.75 498.6 679 512 C553.75 525.4 525.4 553.75 512 679 C498.6 553.75 470.25 525.4 345 512 C470.25 498.6 498.6 470.25 512 345 Z"/>
+</svg>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HappyBarMe — A whole new look for your desktop</title>
+  <meta name="description" content="HappyBarMe is a clean, all-black taskbar with smart search, pinned apps and a glowing start orb. Only 2€. Coming soon for Mac.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HappyBarMe — A whole new look for your desktop">
+  <meta property="og:description" content="A clean, all-black taskbar. Only 2€. Coming soon for Mac.">
+  <meta property="og:image" content="https://happybarme.com/assets/og.jpg">
+  <meta property="og:url" content="https://happybarme.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-1" aria-hidden="true"></div>
+  <div class="glow glow-2" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="HappyBarMe">
+      <img src="assets/logo.svg" alt="" width="32" height="32">
+      <span>HappyBarMe</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn btn-small" href="#pricing">Coming soon</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <img class="orb" src="assets/logo.svg" alt="HappyBarMe logo" width="180" height="180">
+      <h1>Want a whole new look<br>for your desktop?</h1>
+      <p class="lead">Meet <strong>HappyBarMe</strong>: a clean, all-black taskbar with smart search, pinned apps and a glowing start orb.</p>
+      <div class="cta">
+        <a class="btn" href="#pricing">Only 2€ · Coming soon</a>
+        <a class="btn btn-ghost" href="#video">Watch the video</a>
+      </div>
+      <p class="small">Coming soon for Mac</p>
+    </section>
+
+    <!-- Screenshot -->
+    <section class="shot reveal">
+      <img src="assets/screen.jpg" alt="HappyBarMe taskbar and start menu on a desktop" width="1800" height="1166" loading="lazy">
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+      <h2 class="reveal">Everything you need,<br>nothing you don't.</h2>
+      <div class="grid">
+        <article class="card reveal">
+          <div class="icon">✦</div>
+          <h3>Glowing start orb</h3>
+          <p>One click (or ⌥ Space) opens a sleek start menu with your pinned apps and folders.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">⌕</div>
+          <h3>Smart search</h3>
+          <p>Find apps, files and search the web from one field. Press Enter to open the first result.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">◉</div>
+          <h3>Pinned &amp; open apps</h3>
+          <p>Pin your favorites. A white dot shows what's open, click again to minimize.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">◔</div>
+          <h3>Battery ring &amp; clock</h3>
+          <p>Battery level, time and date at a glance, in a clean pill on the right.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">▭</div>
+          <h3>Show desktop</h3>
+          <p>One button hides every window. Your desktop, instantly.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">★</div>
+          <h3>Launch animation</h3>
+          <p>A short glowing intro every time you start your computer. Turn it off anytime.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section id="video" class="video reveal">
+      <div class="video-text">
+        <h2>See it in action</h2>
+        <p>18 seconds to discover your new desktop.</p>
+      </div>
+      <video src="assets/promo.mp4" poster="assets/promo-poster.jpg" controls playsinline preload="none" width="360" height="640"></video>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing reveal">
+      <h2>Simple pricing</h2>
+      <div class="price-card">
+        <p class="tag">One-time purchase</p>
+        <p class="price">2€</p>
+        <ul>
+          <li>All features included</li>
+          <li>Free updates</li>
+          <li>No subscription, no ads</li>
+        </ul>
+        <span class="btn btn-disabled" aria-disabled="true">Coming soon</span>
+        <p class="small">Our goal: #1 in the charts 🏆</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="" width="24" height="24">
+      <span>HappyBarMe</span>
+    </div>
+    <p>By the Hamelin development team</p>
+    <p class="legal">HappyBarMe is an independent app, not affiliated with or endorsed by Apple Inc.<br>
+      Mac is a trademark of Apple Inc., registered in the U.S. and other countries and regions.</p>
+    <p><a href="mentions-legales.html">Mentions légales</a> · © <span id="year">2026</span> HappyBarMe</p>
+  </footer>
+
+  <script>
+    // Apparition douce au défilement
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
