@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://happybarme.com/sitemap.xml

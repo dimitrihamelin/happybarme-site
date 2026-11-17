@@ -3,17 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HappyBarMe — A whole new look for your desktop</title>
-  <meta name="description" content="HappyBarMe is a clean, all-black taskbar with smart search, pinned apps and a glowing start orb. Only 2€. Coming soon for Mac.">
+  <title>HappyBarMe — Custom Taskbar &amp; Start Menu for Mac · Only 2€</title>
+  <meta name="description" content="HappyBarMe gives your desktop a clean, all-black taskbar with a start menu, smart search, pinned apps, battery ring and clock. One-time purchase: 2€. Coming soon for Mac.">
+  <link rel="canonical" href="https://happybarme.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Hamelin development team">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Partage sur les réseaux sociaux -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HappyBarMe">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="HappyBarMe — A whole new look for your desktop">
-  <meta property="og:description" content="A clean, all-black taskbar. Only 2€. Coming soon for Mac.">
+  <meta property="og:description" content="A clean, all-black taskbar with a start menu and smart search. Only 2€. Coming soon for Mac.">
   <meta property="og:image" content="https://happybarme.com/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HappyBarMe logo">
   <meta property="og:url" content="https://happybarme.com/">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HappyBarMe — A whole new look for your desktop">
+  <meta name="twitter:description" content="A clean, all-black taskbar with a start menu and smart search. Only 2€.">
+  <meta name="twitter:image" content="https://happybarme.com/assets/og.jpg">
+
+  <!-- Données structurées pour Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "HappyBarMe",
+        "url": "https://happybarme.com/",
+        "image": "https://happybarme.com/assets/screen.jpg",
+        "logo": "https://happybarme.com/assets/logo.svg",
+        "description": "A clean, all-black taskbar and start menu for Mac, with smart search, pinned apps, a battery ring and a clock.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 14 or later",
+        "offers": {
+          "@type": "Offer",
+          "price": "2.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/PreOrder"
+        },
+        "author": { "@type": "Organization", "name": "Hamelin development team" }
+      },
+      {
+        "@type": "WebSite",
+        "name": "HappyBarMe",
+        "url": "https://happybarme.com/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is HappyBarMe?",
+            "acceptedAnswer": { "@type": "Answer", "text": "HappyBarMe is a clean, all-black taskbar for your Mac desktop, with a start menu, smart search, pinned apps, a battery ring and a clock." } },
+          { "@type": "Question", "name": "How much does HappyBarMe cost?",
+            "acceptedAnswer": { "@type": "Answer", "text": "HappyBarMe costs 2€, as a one-time purchase. No subscription and no ads." } },
+          { "@type": "Question", "name": "When will HappyBarMe be available?",
+            "acceptedAnswer": { "@type": "Answer", "text": "HappyBarMe is coming soon for Mac. Follow us to be the first to know." } },
+          { "@type": "Question", "name": "Which Macs are supported?",
+            "acceptedAnswer": { "@type": "Answer", "text": "HappyBarMe runs on Macs with Apple silicon and macOS 14 or later." } },
+          { "@type": "Question", "name": "Is HappyBarMe made by Apple?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. HappyBarMe is an independent app made by the Hamelin development team. It is not affiliated with or endorsed by Apple Inc." } }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preload" as="image" href="assets/logo.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,13 +83,14 @@
   <div class="glow glow-2" aria-hidden="true"></div>
 
   <header class="nav">
-    <a class="brand" href="#top" aria-label="HappyBarMe">
+    <a class="brand" href="#top" aria-label="HappyBarMe, home">
       <img src="assets/logo.svg" alt="" width="32" height="32">
       <span>HappyBarMe</span>
     </a>
-    <nav>
+    <nav aria-label="Main">
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
       <a class="btn btn-small" href="#pricing">Coming soon</a>
     </nav>
   </header>
@@ -35,9 +98,9 @@
   <main id="top">
     <!-- Hero -->
     <section class="hero">
-      <img class="orb" src="assets/logo.svg" alt="HappyBarMe logo" width="180" height="180">
+      <img class="orb" src="assets/logo.svg" alt="HappyBarMe logo, a glowing orb with a white star" width="180" height="180">
       <h1>Want a whole new look<br>for your desktop?</h1>
-      <p class="lead">Meet <strong>HappyBarMe</strong>: a clean, all-black taskbar with smart search, pinned apps and a glowing start orb.</p>
+      <p class="lead">Meet <strong>HappyBarMe</strong>: a clean, all-black <em>taskbar and start menu</em> with smart search, pinned apps and a glowing start orb.</p>
       <div class="cta">
         <a class="btn" href="#pricing">Only 2€ · Coming soon</a>
         <a class="btn btn-ghost" href="#video">Watch the video</a>
@@ -45,58 +108,71 @@
       <p class="small">Coming soon for Mac</p>
     </section>
 
-    <!-- Screenshot -->
+    <!-- Capture principale -->
     <section class="shot reveal">
-      <img src="assets/screen.jpg" alt="HappyBarMe taskbar and start menu on a desktop" width="1800" height="1166" loading="lazy">
+      <picture>
+        <source srcset="assets/screen.webp" type="image/webp">
+        <img src="assets/screen.jpg" alt="HappyBarMe on a desktop: the black taskbar at the bottom and the start menu open with pinned apps and folders" width="2000" height="1294" fetchpriority="high">
+      </picture>
     </section>
 
-    <!-- Features -->
+    <!-- Gros plan de la barre -->
+    <section class="bar-section reveal">
+      <h2>Your new taskbar</h2>
+      <p class="section-lead">Active app on the left, start orb and pinned apps in the center, battery, time and date on the right.</p>
+      <picture>
+        <source srcset="assets/bar.webp" type="image/webp">
+        <img class="bar-img" src="assets/bar.jpg" alt="Close-up of the HappyBarMe taskbar: active app, start orb, pinned app icons, battery ring, clock and show-desktop button" width="2400" height="224" loading="lazy">
+      </picture>
+    </section>
+
+    <!-- Fonctionnalités -->
     <section id="features" class="features">
       <h2 class="reveal">Everything you need,<br>nothing you don't.</h2>
       <div class="grid">
         <article class="card reveal">
-          <div class="icon">✦</div>
+          <div class="icon" aria-hidden="true">✦</div>
           <h3>Glowing start orb</h3>
           <p>One click (or ⌥ Space) opens a sleek start menu with your pinned apps and folders.</p>
         </article>
         <article class="card reveal">
-          <div class="icon">⌕</div>
+          <div class="icon" aria-hidden="true">⌕</div>
           <h3>Smart search</h3>
-          <p>Find apps, files and search the web from one field. Press Enter to open the first result.</p>
+          <p>Find apps and search the web from one field. Press Enter to open the first result.</p>
         </article>
         <article class="card reveal">
-          <div class="icon">◉</div>
+          <div class="icon" aria-hidden="true">◉</div>
           <h3>Pinned &amp; open apps</h3>
           <p>Pin your favorites. A white dot shows what's open, click again to minimize.</p>
         </article>
         <article class="card reveal">
-          <div class="icon">◔</div>
+          <div class="icon" aria-hidden="true">◔</div>
           <h3>Battery ring &amp; clock</h3>
           <p>Battery level, time and date at a glance, in a clean pill on the right.</p>
         </article>
         <article class="card reveal">
-          <div class="icon">▭</div>
+          <div class="icon" aria-hidden="true">▭</div>
           <h3>Show desktop</h3>
           <p>One button hides every window. Your desktop, instantly.</p>
         </article>
         <article class="card reveal">
-          <div class="icon">★</div>
+          <div class="icon" aria-hidden="true">★</div>
           <h3>Launch animation</h3>
           <p>A short glowing intro every time you start your computer. Turn it off anytime.</p>
         </article>
       </div>
     </section>
 
-    <!-- Video -->
+    <!-- Vidéo -->
     <section id="video" class="video reveal">
       <div class="video-text">
         <h2>See it in action</h2>
         <p>18 seconds to discover your new desktop.</p>
       </div>
-      <video src="assets/promo.mp4" poster="assets/promo-poster.jpg" controls playsinline preload="none" width="360" height="640"></video>
+      <video src="assets/promo.mp4" poster="assets/promo-poster.jpg" controls playsinline preload="none" width="360" height="640" aria-label="HappyBarMe promo video"></video>
     </section>
 
-    <!-- Pricing -->
+    <!-- Prix -->
     <section id="pricing" class="pricing reveal">
       <h2>Simple pricing</h2>
       <div class="price-card">
@@ -110,6 +186,31 @@
         <span class="btn btn-disabled" aria-disabled="true">Coming soon</span>
         <p class="small">Our goal: #1 in the charts 🏆</p>
       </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq reveal">
+      <h2>Questions</h2>
+      <details>
+        <summary>What is HappyBarMe?</summary>
+        <p>HappyBarMe is a clean, all-black taskbar for your Mac desktop, with a start menu, smart search, pinned apps, a battery ring and a clock.</p>
+      </details>
+      <details>
+        <summary>How much does it cost?</summary>
+        <p>2€, as a one-time purchase. No subscription and no ads.</p>
+      </details>
+      <details>
+        <summary>When will it be available?</summary>
+        <p>Very soon. Follow us to be the first to know when it launches.</p>
+      </details>
+      <details>
+        <summary>Which Macs are supported?</summary>
+        <p>Macs with Apple silicon running macOS 14 or later.</p>
+      </details>
+      <details>
+        <summary>Is HappyBarMe made by Apple?</summary>
+        <p>No. HappyBarMe is an independent app made by the Hamelin development team. It is not affiliated with or endorsed by Apple Inc.</p>
+      </details>
     </section>
   </main>
 
@@ -128,7 +229,7 @@
     // Apparition douce au défilement
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>

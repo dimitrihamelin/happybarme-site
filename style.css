@@ -159,3 +159,25 @@ h2 { font-size: clamp(32px, 5vw, 52px); text-align: center; margin-bottom: 48px;
 .legal-page ul { padding-left: 20px; }
 .legal-page .todo { color: var(--pink); font-weight: 600; }
 .legal-page a { text-decoration: underline; }
+
+/* Gros plan de la barre */
+.bar-section { margin-bottom: 120px; text-align: center; }
+.bar-section h2 { margin-bottom: 14px; }
+.section-lead { color: var(--muted); font-size: 18px; max-width: 620px; margin: 0 auto 36px; }
+.bar-img {
+  width: 100%; border-radius: 16px; border: 1px solid var(--line);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7), 0 0 60px rgba(157, 102, 255, 0.2);
+}
+
+/* FAQ */
+.faq { max-width: 760px; margin-bottom: 120px; }
+.faq details {
+  border: 1px solid var(--faint); border-radius: 14px; margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.03); padding: 0 22px;
+}
+.faq summary { cursor: pointer; padding: 18px 0; font-weight: 700; font-size: 17px; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; float: right; color: var(--muted); font-weight: 400; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { color: var(--muted); padding-bottom: 18px; }
+@media (max-width: 560px) { .bar-section, .faq { margin-bottom: 80px; } }
